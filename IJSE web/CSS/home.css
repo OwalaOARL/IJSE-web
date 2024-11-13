@@ -1,0 +1,49 @@
+.heading_class{
+    color:cornflowerblue;
+    font-size: 70px;
+}
+.new_class{
+    color:fuchsia;
+    font-size: 70px;
+}
+.div_margin{
+    margin: 50px;
+}
+.div_border{
+    border: 20px green solid;
+}
+.div_padding{
+    padding: 50px;
+}
+.p_font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+    line-height: 20px;
+}
+
+
+div ~ p{
+    background-color: rgb(255, 0, 153);
+}
+.main_div>a {
+    text-decoration: none;
+    background-color:red;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+
+
+}
+.main_div>a:hover{
+    color: black;
+    background-color: yellow;
+}
+.main_div>p::first-letter{
+    font-size: 100px;
+}
+
+.main_div>p::first-line{
+    color: blue;
+}

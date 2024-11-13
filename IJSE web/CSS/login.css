@@ -1,0 +1,21 @@
+.login{
+    width:500px;
+    margin-inline: auto;
+    background-color:white;
+    position: relative;
+    top: 150px;
+    
+}
+.logo{
+    text-align: center;
+
+}
+
+@media (max-width:550px){
+    .login{
+        width:320px;
+    }
+    .logo{
+        text-align: start;
+    }
+}

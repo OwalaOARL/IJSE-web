@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+       
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/login.css">
+    </head>
+
+    <body class="bg-body-tertiary">
+<div class="container">
+    <div class="login p-4 shadow rounded">
+        <div class="logo">
+            <img src="ijse.png" alt="IJSE LOGO">
+
+        </div>
+        <h1 class="text-center">Login</h1>
+        <form onsubmit="validate(event)">
+            <div class="form-group mb-3">
+                <lable for="username" class="form-label">Username</lable>
+                <input type="text" class="form-control" id="username" placeholder="Enter your Username" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="username" placeholder="Enter your password" required>
+            </div>
+            <div class="alert-danger" role="alert">
+                Invalid form
+            </div>
+            <div class="forget-password mb-3 ">
+                <a href="#">Forget your password</a>
+
+            </div>
+            <button class="btn btn-primary">Login</button>
+        </form>
+
+    </div>
+</div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script>
+            document.getElementById('valid').style.display='none';
+            document.getElementById('Invalid').style.display='none';
+            function validate(event){
+                event.preventDefault();
+                 console.log("document.getElementById('username') :  ", document.getElementById('username'));
+                 console.log("document.getElementById('username').value :  ", document.getElementById('username').value);
+                 let username = document.getElementById('username').value;
+                 console.log("username : ", username);
+
+                 let password = document.getElementById('password').value;
+                 console.log("Password : " , password);
+
+                 if (username !='' && password != ''){
+                    document.getElementById('valid').style.display = 'block';
+                    document.getElementById('Invalid').style.display = 'none';
+                    document.getElementById('valid').innerHTML = 'This form is valid';
+                    console.log("valid");
+                 }else{
+                    document.getElementById('Invalid').style.display = 'block';
+                    document.getElementById('valid').style.display = 'none';
+                    document.getElementById('Invalid').innerHTML = 'This form is valid';
+                    console.log("Invalid");
+                 }
+
+
+            }
+        </script>
+        <script>window.alert("Hello World");
+        document.write("Hello world !! this is document");
+        console.log("Hello world");
+        var x="ABC";
+        console.log('x:',x);
+        let y=10.00;
+        console.log('y:',y);
+
+        x=200;
+        console.log('x After:',x);
+
+        y="ABC";
+        console.log('y After:',y);
+        const z=1;
+        console.log('z:',z);
+        //logic
+        //z=100;
+       // console.log('z after:',z);
+
+
+       let age=26;
+       console.log("Age:",age);
+       age=age+5;
+       console.log("Age after adding:",age);
+
+       let maths=85;
+       console.log("maths:",maths);
+       let sinhala=90;
+       console.log("sinhala",sinhala);
+       let total=maths*sinhala;
+       console.log("Total:",total);
+
+       console.log(maths>sinhala)
+       console.log(maths<sinhala)
+       console.log(maths>=sinhala)
+
+       console.log(maths<sinhala && maths===sinhala);
+       console.log(maths<sinhala && maths!=sinhala);
+       console.log(maths<sinhala || maths===sinhala);
+
+console.log(!(sinhala==90));
+
+
+if(sinhala>maths){
+console.log('Sinahala marks are higher than maths');
+}else if(sinhala==maths){
+    console.log('sinhala marks and maths marks are equal');
+}else{
+    console.log('Sinhala marks is higher than maths');
+}
+
+for(let i=1;i<=10;i++){
+    console.log(i)
+}
+
+let index=1;
+while(index<=10){
+    console.log(index);
+    index++;
+}
+
+const test=123;
+const cars = ["BMW","AUDI","BENZ"]
+//let cars2=["BMW","AUDI","BENZ"]
+//cars2=123;
+console.log(cars);
+console.log(cars[0]);
+console.log(cars[1]);
+console.log(cars[2]);
+
+
+
+
+let j=0;
+while(j<cars.length){
+    console.log(cars[j]);
+    j++;
+}
+console.log("===============Methods==================");
+
+console.log("Length:",cars.length);
+cars.push("LAMB")
+console.log(cars);
+cars.pop();
+console.log(cars);
+console.log(cars.toString());
+console.log(cars.at(2));
+
+console.log("=========Objects=========");
+
+const car = {
+    type: "BMW",
+    model: 'B-12',
+    color: 'red',
+    m_year:"2015"
+}
+console.log("Type: ",car.type);
+console.log("color:",car.color);
+car.color = "white";
+console.log("Color After :",car.color);
+
+console.log("=====================Objects Array=================");
+
+const obj_array = [
+    {
+    type: "BMW",
+    model: 'B-12',
+    color: 'red',
+    m_year:"2015"
+    }
+    
+
+]
+
+let function_call = sum(10,90);
+console.log("function_call:", function_call);
+
+function sum(value1,value2){
+    return value1 + value2;
+}
+
+console.log("========arrow functions==========");
+
+const arrow_function = (value3, value4) => {
+    return value3 + value4;
+}
+console.log("========Object Array using arrow function======");
+obj_array.map((a)=>{
+    console.log(a.color);
+
+})
+
+        </script>
+    </body>
+        </body>
+</html>
+        
